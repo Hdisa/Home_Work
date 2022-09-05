@@ -1,28 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class exercise_middle3 : MonoBehaviour
+namespace Middle
 {
-    void Start()
+    public class ExerciseMiddle3 : MonoBehaviour
     {
-        int[] numArray = new int[] {3, 1};
-        Debug.Log(evenSum(numArray));
-    }
-    int evenSum(int[] numArray)
-    {
-        int result = 0;
-        foreach (int x in numArray)
+        void Start()
         {
-            if (x % 2 == 0)
+            int[] numArray = new int[] { 3, 1 };
+            Debug.Log(evenSum(numArray));
+        }
+
+        int evenSum(int[] numArray)
+        {
+            int result = 0;
+            foreach (int x in numArray)
             {
-                result += x;
+                if (x % 2 == 0)
+                {
+                    result += x;
+                }
             }
+
+            if (result == 0)
+            {
+                return -1;
+            }
+
+            return result;
         }
-        if (result == 0)
-        {
-            return -1;
-        }
-        return result;
     }
 }

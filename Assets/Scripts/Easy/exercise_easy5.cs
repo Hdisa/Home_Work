@@ -1,26 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class exercise_easy5 : MonoBehaviour
+namespace Easy
 {
-    void Start()
+    public class ExerciseEasy5 : MonoBehaviour
     {
-        numberComparison(200, 199);
-    }
-    void numberComparison(int x, int y)
-    {
-        if (x > y)
+        void Start()
         {
-            Debug.Log($"{x} > {y}");
+            numberComparison(200, 199);
         }
-        else if (x < y)
+
+        void numberComparison(int x, int y)
         {
-            Debug.Log($"{x} < {y}");
-        }
-        else
-        {
-            Debug.Log($"{x} = {y}");
+            if (x > y)
+            {
+                Debug.Log($"{x} > {y}");
+            }
+            else if (x < y)
+            {
+                Debug.Log($"{x} < {y}");
+            }
+            else
+            {
+                Debug.Log($"{x} = {y}");
+            }
         }
     }
 }
