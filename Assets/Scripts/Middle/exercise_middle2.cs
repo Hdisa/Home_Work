@@ -4,7 +4,7 @@ namespace Middle
 {
     public class ExerciseMiddle2 : MonoBehaviour
     {
-        void Start()
+        private void Start()
         {
             Debug.Log(rowOfNumbers(10, 2));
         }

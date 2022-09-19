@@ -3,16 +3,16 @@ namespace Middle
 {
     public class ExerciseMiddle3 : MonoBehaviour
     {
-        void Start()
+        private void Start()
         {
             int[] numArray = new int[] { 3, 1 };
-            Debug.Log(evenSum(numArray));
+            Debug.Log(EvenSum(numArray));
         }
 
-        int evenSum(int[] numArray)
+        static int EvenSum(int[] numArray)
         {
-            int result = 0;
-            foreach (int x in numArray)
+            var result = 0;
+            foreach (var x in numArray)
             {
                 if (x % 2 == 0)
                 {

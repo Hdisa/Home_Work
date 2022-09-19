@@ -1,27 +1,33 @@
-using Middle.exercise_middle4;
 using UnityEngine;
 
-public class ArenaStartGame : MonoBehaviour
+namespace Middle.exercise_middle4
 {
-    public Warrior sora = new Warrior("Sora", 100, 10, 30);
-    public Warrior sephiroth = new Warrior("Sephiroth", 125, 10, 20);
-    public void StartBattle()
+    public class ArenaStartGame : MonoBehaviour
     {
-        sora.Greetings();
-        sephiroth.Greetings();
-        while (sephiroth._health > 0 && sora._health > 0)
+        private Warrior sora = new Warrior("Sora", 100, 10, 30);
+        private Warrior sephiroth = new Warrior("Sephiroth", 125, 10, 20);
+
+        private void StartBattle()
         {
-            sora.Attack(sephiroth);
-            if (sephiroth._health <= 0)
+            sora.Greetings();
+            sephiroth.Greetings();
+            while (sephiroth._health > 0 && sora._health > 0)
             {
-                break;
+                sora.Attack(sephiroth);
+                if (sephiroth._health <= 0)
+                {
+                    break;
+                }
+
+                sephiroth.Attack(sora);
             }
-            sephiroth.Attack(sora);
+
+            Debug.Log("Битва окончена");
         }
-        Debug.Log("Битва окончена");
-    }
-    void Start()
-    {
-        StartBattle();
+
+        private void Start()
+        {
+            StartBattle();
+        }
     }
 }

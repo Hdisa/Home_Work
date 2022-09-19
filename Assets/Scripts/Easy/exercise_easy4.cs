@@ -4,23 +4,24 @@ namespace Easy
 {
     public class ExerciseEasy4 : MonoBehaviour
     {
-        const float ConvertValue = 2.204f;
-        float kilogram, pound;
+        private const float ConvertValue = 2.204f;
+        private float _kilogram;
+        private float _pound;
 
-        void Start()
+        private void Start()
         {
-            Debug.Log(ConvertPoundToKilogam(10)); //4.53
+            Debug.Log(ConvertPoundToKilogram(10)); //4.53
             Debug.Log(ConvertKilogramToPound(10)); //22.04
         }
 
-        float ConvertPoundToKilogam(float pound)
+        private float ConvertPoundToKilogram(float pound)
         {
-            return kilogram = pound / ConvertValue;
+            return _kilogram = pound / ConvertValue;
         }
 
-        float ConvertKilogramToPound(float kilogram)
+        private float ConvertKilogramToPound(float kilogram)
         {
-            return pound = kilogram * ConvertValue;
+            return _pound = kilogram * ConvertValue;
         }
     }
 }
